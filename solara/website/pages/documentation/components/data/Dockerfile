@@ -1,7 +1,7 @@
 FROM python:3.13.0-slim
 WORKDIR /app
 COPY . .
-RUN pip install gunicorn solara flask simple_websocket flask_sock plotly pandas
+RUN pip install -r requirements.txt
 
 # Set SOLARA_APP environment variable
 ENV SOLARA_APP=dataframe.py
