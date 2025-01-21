@@ -23,12 +23,17 @@ from . import kernel_context, patch, reload, settings
 from .kernel import Kernel
 from .utils import pdb_guard
 
+# import ptvsd
+# ptvsd.enable_attach(address=('localhost', 9222))
+# print("Waiting for debugger attach...")
+# ptvsd.wait_for_attach()
+
 WebSocket = Any
 apps: Dict[str, "AppScript"] = {}
 thread_lock = threading.Lock()
 
 logger = logging.getLogger("solara.server.app")
-
+logging.basicConfig(level="INFO")
 reload.reloader.start()
 
 

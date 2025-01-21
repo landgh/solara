@@ -18,7 +18,7 @@ def Page():
         solara.Markdown("""
 # Scaling up your ipywidgets app
 
-## The problem
+## The problemmmmm
 We at Widgetti, the creators of Solara, have regularly seen companies struggle trying to scale up their ipywidgets apps.
 
 These app often start as a prototype or a small app in the Jupyter notebook, and become important internal apps. Together with Voila

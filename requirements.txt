@@ -1,4 +1,0 @@
-.[all]
-./packages/solara-server[all]
-./packages/solara-enterprise[all]
-./packages/solara-meta[all]

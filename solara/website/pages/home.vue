@@ -17,7 +17,7 @@
             </div>
             <h1>Build high-quality web applications in pure Python</h1>
             <h2>
-                From dashboards to large applications: Solara delivers solid, maintainable code trusted by
+                From dashboards to large applicationsssssssssssss: Solara delivers solid, maintainable code trusted by
                 startups & large enterprises.
             </h2>
         </section>

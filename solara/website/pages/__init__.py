@@ -218,8 +218,9 @@ autorouting._redirects = _redirects
 
 @solara.component
 def Page():
+    print("home page rerender------------------------------------------------")
+    solara.text("this is page 0")
     solara.Markdown("should not see me")
-
 
 @solara.component
 def SimpleListItem(text=None, children=[], class_: str = None, icon_name=None):

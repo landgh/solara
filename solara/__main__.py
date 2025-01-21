@@ -1,3 +1,4 @@
+import logging
 import os
 import shutil
 import site
@@ -28,6 +29,7 @@ except ImportError:
     def ssg_crawl(*args, **kwargs):  # type: ignore
         raise RuntimeError('SSG not available, please install solara-enterprise (pip install "solara-enterprise[ssg]"')
 
+logger = logging.getLogger("solara.__main__")
 
 HERE = Path(__file__).parent
 
@@ -299,8 +301,9 @@ def run(
     qt=False,
 ):
     """Run a Solara app."""
+    logging.error("solara: --dev is deprecated, use --auto-restart/-a instead into log")  # noqa: T201
     if dev is not None:
-        print("solara: --dev is deprecated, use --auto-restart/-a instead", file=sys.stderr)  # noqa: T201
+        print("solara: --dev is deprecated, use --auto-restart/-a instead............", file=sys.stderr)  # noqa: T201
         auto_restart = dev
     if reload is not None:
         print("solara: --reload is deprecated, use --auto-restart/-a instead", file=sys.stderr)  # noqa: T201
@@ -752,6 +755,7 @@ cli.add_command(ssg)
 def main():
     args = sys.argv
     # skip everything after -- if it exists
+    print(f"startng solara with args {args} ...................")  # noqa
     if "--" in args:
         args = args[: args.index("--")]
     cli(args[1:])

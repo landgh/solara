@@ -2,7 +2,7 @@ import solara
 from solara.website.components.sidebar import Sidebar
 from solara.website.components.contact import Contact
 
-Sidebar = Sidebar
+Sidebarr = Sidebar
 
 
 @solara.component
